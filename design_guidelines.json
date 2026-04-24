@@ -1,0 +1,81 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 3 (Pastel & Soft) with Neo-Brutalist Twist",
+  "rationale": "For a study tool, we avoid standard 'SaaS Blue' or sterile enterprise looks. By combining soft pastel colors (Lavender, Mint, Yellow) with high-contrast Neo-Brutalist elements (thick black borders, hard drop shadows, bold typography), we create a highly engaging, tactile, and 'anti-boring' productivity dashboard. This aesthetic is distinct, modern, and perfectly suited for Gen Z students.",
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "primary": "#B1A9FF",
+    "primary_foreground": "#09090B",
+    "secondary": "#A7F3D0",
+    "secondary_foreground": "#09090B",
+    "accent": "#FDE047",
+    "accent_foreground": "#09090B",
+    "destructive": "#FF6B6B",
+    "destructive_foreground": "#09090B",
+    "text_main": "#09090B",
+    "text_muted": "#52525B",
+    "border": "#09090B"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "DM Sans",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@400;700;900&display=swap",
+    "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight",
+    "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+    "h3": "text-xl sm:text-2xl font-bold",
+    "body": "text-base font-normal leading-relaxed text-[#09090B]"
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing within structured grids. Use the 'Control Room' grid for the Study Library and Progress trackers.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "card_padding": "p-6 sm:p-8",
+    "grid_dashboard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "border_radius": "rounded-md"
+  },
+  "surface_strategies": {
+    "cards": "bg-white border-2 border-black shadow-[4px_4px_0px_0px_#09090B] rounded-md transition-all",
+    "buttons_primary": "bg-[#B1A9FF] text-black font-bold border-2 border-black shadow-[4px_4px_0px_0px_#09090B] rounded-md transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#09090B] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none",
+    "buttons_secondary": "bg-[#FDFBF7] text-black font-bold border-2 border-black shadow-[4px_4px_0px_0px_#09090B] rounded-md transition-transform hover:-translate-y-1 active:translate-y-[4px] active:translate-x-[4px] active:shadow-none",
+    "inputs": "bg-white border-2 border-black rounded-md p-3 focus:outline-none focus:ring-0 focus:border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_#B1A9FF]"
+  },
+  "components_instructions": {
+    "navigation": "Sticky top nav with solid white background, 2px black bottom border. Logo in Black text. Links in Outfit font. Mobile nav should use a thick bordered dropdown.",
+    "document_uploader": "Large drag-and-drop zone. Pastel Yellow (#FDE047) background on hover, thick dashed 2px black border. Centered prominent Phosphor folder icon.",
+    "status_badges": "Processing: Yellow bg (#FDE047), Black border. Ready: Mint bg (#A7F3D0), Black border. Failed: Red bg (#FF6B6B), Black border. Font should be small, uppercase, bold.",
+    "quiz_interface": "One-by-one MCQ style. Answer options as thick-bordered white cards. Selected state: Mint bg (#A7F3D0) with translate effect (active state). Add a prominent progress bar with thick black borders.",
+    "charts": "Recharts or Shadcn charts. Use primary and secondary colors (Lavender and Mint) for bars/lines. Grid lines should be distinct and black, axes in Outfit font.",
+    "tables": "Admin panel tables must have borders around EVERY cell (border-collapse). Header row bg: Lavender (#B1A9FF) with bold text."
+  },
+  "motion_and_interactions": {
+    "hover": "Elements should lift up slightly and cast a larger solid shadow.",
+    "click": "Neo-brutalist 'press' effect: translate x and y positively (e.g., active:translate-y-[4px] active:translate-x-[4px]), remove drop shadow to simulate physical button press."
+  },
+  "icons_and_assets": {
+    "library": "@phosphor-icons/react",
+    "installation_command": "yarn add @phosphor-icons/react",
+    "style": "Duotone or Bold weight. They match the chunky neo-brutalist aesthetic perfectly. Avoid thin/light icons."
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/29474097/pexels-photo-29474097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Abstract pastel geometric 3D background for the landing page or auth screens."
+    },
+    "dashboard_empty_state": {
+      "url": "https://images.pexels.com/photos/1509485/pexels-photo-1509485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Stylish notebooks and pens, use as an illustration when the study library is empty."
+    },
+    "student_avatar": {
+      "url": "https://images.unsplash.com/photo-1770235622269-bf3124d85032?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwc3R1ZGVudCUyMHN0dWR5aW5nJTIwbW9kZXJufGVufDB8fHx8MTc3NjYwNTcxMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Default avatar or testimonial image of a student studying."
+    },
+    "auth_split_image": {
+      "url": "https://images.pexels.com/photos/6549349/pexels-photo-6549349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Young man studying with a laptop. Perfect for the left/right split section of Login/Register screens."
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "All text must pass WCAG AA. Pitch Black text on pastel backgrounds easily passes.",
+    "testing_attributes": "CRITICAL: All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='upload-document-button', data-testid='quiz-option-a')."
+  }
+}

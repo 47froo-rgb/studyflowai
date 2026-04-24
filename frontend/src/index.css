@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  background-color: #fdfbf7;
+  color: #09090b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  :root {
+    --background: 42 55% 98%;
+    --foreground: 240 6% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 6%;
+    --primary: 246 100% 83%;
+    --primary-foreground: 240 6% 6%;
+    --secondary: 155 76% 80%;
+    --secondary-foreground: 240 6% 6%;
+    --muted: 42 20% 93%;
+    --muted-foreground: 240 4% 36%;
+    --accent: 50 97% 62%;
+    --accent-foreground: 240 6% 6%;
+    --destructive: 0 100% 71%;
+    --destructive-foreground: 240 6% 6%;
+    --border: 240 6% 6%;
+    --input: 240 6% 6%;
+    --ring: 246 100% 83%;
+    --chart-1: 246 100% 70%;
+    --chart-2: 155 60% 55%;
+    --chart-3: 50 90% 55%;
+    --chart-4: 0 90% 65%;
+    --chart-5: 200 80% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink;
+  }
+}
+
+/* Neo-brutalist design tokens */
+@layer components {
+  .brut-card {
+    @apply bg-white border-2 border-ink rounded-md shadow-brut;
+  }
+  .brut-card-hover {
+    @apply brut-card transition-all hover:-translate-y-1 hover:shadow-brut-lg;
+  }
+  .brut-btn {
+    @apply inline-flex items-center justify-center gap-2 font-heading font-bold border-2 border-ink rounded-md px-4 py-2 shadow-brut transition-all hover:-translate-y-0.5 hover:shadow-brut-lg active:translate-x-[3px] active:translate-y-[3px] active:shadow-none disabled:opacity-60 disabled:pointer-events-none;
+  }
+  .brut-btn-primary { @apply brut-btn bg-lavender text-ink; }
+  .brut-btn-secondary { @apply brut-btn bg-paper text-ink; }
+  .brut-btn-accent { @apply brut-btn bg-sun text-ink; }
+  .brut-btn-mint { @apply brut-btn bg-mint text-ink; }
+  .brut-btn-danger { @apply brut-btn bg-coral text-ink; }
+  .brut-input {
+    @apply w-full bg-white border-2 border-ink rounded-md px-3 py-2.5 font-body text-ink placeholder:text-ink/40 focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_#B1A9FF] transition-shadow;
+  }
+  .brut-badge {
+    @apply inline-flex items-center gap-1 text-xs font-heading font-bold uppercase tracking-wider border-2 border-ink rounded-md px-2 py-0.5;
+  }
+  .brut-tag { @apply brut-badge bg-paper; }
+}
+
+/* subtle grid texture on hero */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(9,9,11,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(9,9,11,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* keep radix layering */
+@layer base {
+  [data-debug-wrapper="true"] { display: contents !important; }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit; margin-right: inherit; margin-top: inherit; margin-bottom: inherit;
+    padding-left: inherit; padding-right: inherit; padding-top: inherit; padding-bottom: inherit;
+    column-gap: inherit; row-gap: inherit; gap: inherit;
+    border-left-width: inherit; border-right-width: inherit; border-top-width: inherit; border-bottom-width: inherit;
+    border-left-style: inherit; border-right-style: inherit; border-top-style: inherit; border-bottom-style: inherit;
+    border-left-color: inherit; border-right-color: inherit; border-top-color: inherit; border-bottom-color: inherit;
+  }
+}
